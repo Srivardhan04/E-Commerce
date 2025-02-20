@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chalo Online Shopping</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Centered Search Bar */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 5px 10px;
+            width: 300px;
+            margin: 0 auto; /* Centers the search bar */
+        }
+
+        .search-bar input {
+            border: none;
+            padding: 8px;
+            font-size: 16px;
+            flex-grow: 1;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Featured Products */
+        .featured-products {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product-item {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product-item h3 {
+            color: black;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .product-item p {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .product-item button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .product-item button:first-of-type {
+            background: black;
+            color: white;
+        }
+
+        .product-item .buy-now {
+            background: rgb(204, 204, 17);
+            color: black;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        /* Login/Signup Styles */
+        .form-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .form-container button:hover {
+            background-color: #555;
+        }
+
+        .form-container .sign-up-link {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="#">Chalo Online Shopping</a>
+        </div>
+        <!-- Centered Search Bar -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search products...">
+        </div>
+        <!-- Navigation on the Right -->
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content (Featured Products) -->
+    <main>
+        <section class="featured-products">
+            <h1>Featured Products</h1>
+            <div class="product-list">
+                <!-- Product 1 to 15 -->
+                <div class="product-item">
+                    <a href="products/product1.html">
+                        <img src="assets/images/product1.jpg" alt="VR Box">
+                        <h3>VR Box</h3>
+                        <p>$4</p>
+                    </a>
+                    <button>Add to Cart</button>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+
+                <div class="product-item">
+                    <a href="products/product2.html">
+                        <img src="assets/images/product2.jpg" alt="Laptop">
+                        <h3>Laptop</h3>
+                        <p>$69.99</p>
+                    </a>
+                    <button>Add to Cart</button>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+
+                <div class="product-item">
+                    <a href="products/product3.html">
+                        <img src="assets/images/product3.jpg" alt="Headsets">
+                        <h3>Headsets</h3>
+                        <p>$9</p>
+                    </a>
+                    <button>Add to Cart</button>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+
+                <div class="product-item">
+                    <a href="products/product4.html">
+                        <img src="assets/images/product4.jpg" alt="Air Conditioner">
+                        <h3>Air Conditioner</h3>
+                        <p>$99.99</p>
+                    </a>
+                    <button>Add to Cart</button>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+
+                <div class="product-item">
+                    <a href="products/product5.html">
+                        <img src="assets/images/product5.jpg" alt="Refrigerator">
+                        <h3>Refrigerator</h3>
+                        <p>$29.99</p>
+                    </a>
+                    <button>Add to Cart</button>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+
+                <div class="product-item">
+                    <a href="products/product6.html">
+                        <img src="assets/images/product6.jpg" alt="Microwave Oven">
+                        <h3>Microwave Oven</h3>
+                        <p>$89.99</p>
+                    </a>
+                    <button>Add to Cart</button>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+
+                <div class="product-item">
+                    <a href="products/product7.html">
+                        <img src="assets/images/product7.jpg" alt="Washing Machine">
+                        <h3>Washing Machine</h3>
+                        <p>$39.99</p>
+                    </a>
+                    <button>Add to Cart</button>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+
+                <div class="product-item">
+                    <a href="products/product8.html">
+                        <img src="assets/images/product8.jpg" alt="Curtains">
+                        <h3>Curtains</h3>
+                        <p>$5.99</p>
+                    </a>
+                    <button>Add to Cart</button>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+
+                <div class="product-item">
+                    <a href="products/product9.html">
+                        <img src="assets/images/product9.jpg" alt="BLack Tiger">
+                        <h3>Black Tiger</h3>
+                        <p>$7.99</p>
+                    </a>
+                    <button>Add to Cart</button>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+
+                <div class="product-item">
+                    <a href="products/product10.html">
+                        <img src="assets/images/product10.jpg" alt="Organizer">
+                        <h3>Organizer</h3>
+                        <p>$7.99</p>
+                    </a>
+                    <button>Add to Cart</button>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+
+                <div class="product-item">
+                    <a href="products/product11.html">
+                        <img src="assets/images/product11.jpg" alt="Bike">
+                        <h3>Bike</h3>
+                        <p>$7.99</p>
+                    </a>
+                    <button>Add to Cart</button>
+                    <button class="buy-now">Buy Now</button>
+                </div><div class="product-item">
+                    <a href="products/product12.html">
+                        <img src="assets/images/product12.jpg" alt="Sofa">
+                        <h3>Sofa</h3>
+                        <p>$7.99</p>
+                    </a>
+                    <button>Add to Cart</button>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+
+                <div class="product-item">
+                    <a href="products/product13.html">
+                        <img src="assets/images/product13.jpg" alt="Dinning Table">
+                        <h3>Dinning Table</h3>
+                        <p>$7.99</p>
+                    </a>
+                    <button>Add to Cart</button>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+
+                <div class="product-item">
+                    <a href="products/product14.html">
+                        <img src="assets/images/product14.jpg" alt="Chairs">
+                        <h3>Chairs</h3>
+                        <p>$7.99</p>
+                    </a>
+                    <button>Add to Cart</button>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+                
+                
+                
+                
+
+                <div class="product-item">
+                    <a href="products/product15.html">
+                        <img src="assets/images/product15.jpg" alt="Ember Cookware">
+                        <h3>Ember Cookware Arcilla Ceramic Non Stick Dutch Oven 24cm</h3>
+                        <p>$109.99</p>
+                    </a>
+                    <button>Add to Cart</button>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Chalo Online Shopping</p>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+    <script>
+        // JavaScript for search functionality (just an example)
+        document.getElementById('searchButton').addEventListener('click', function() {
+            var searchQuery = document.getElementById('searchInput').value;
+            if (searchQuery.trim() !== "") {
+                alert("Searching for: " + searchQuery);
+            } else {
+                alert("Please enter a search term.");
+            }
+        });
+    </script>
+</body>
+</html>
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chalo Online Shopping</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html">Chalo Online Shopping</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+        <input type="text" id="search-bar" placeholder="Search for products..." onkeyup="searchProducts()">
+    </header>
+
+    <!-- Main Content (Featured Products) -->
+    <main>
+        <section class="featured-products">
+            <h1>Featured Products</h1>
+            <div class="product-list">
+                <!-- Example product -->
+                <div class="product-item">
+                    <a href="products/product1.html">
+                        <img src="assets/images/product1.jpg" alt="VR Box">
+                        <h3>VR Box</h3>
+                        <p>$4</p>
+                    </a>
+                    <button onclick="addToCart(1)">Add to Cart</button>
+                </div>
+                <!-- Add more products as needed -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Chalo Online Shopping</p>
+    </footer>
+
+</body>
+</html>
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chalo Online Shopping</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="#">Chalo Online Shopping</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="cart.html">Cart</a></li> <!-- Make sure the link is correct -->
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+        <input type="text" id="search-bar" placeholder="Search for products..." onkeyup="searchProducts()">
+    </header>
+
+    <!-- Main Content (Featured Products) -->
+    <main>
+        <section class="featured-products">
+            <h1>Featured Products</h1>
+            <div class="product-list">
+                <div class="product-item">
+                    <a href="products/product1.html">
+                        <img src="assets/images/product1.jpg" alt="VR Box">
+                        <h3>VR Box</h3>
+                        <p>$4</p>
+                    </a>
+                    <button onclick="addToCart(1)">Add to Cart</button>
+                </div>
+                <!-- Add more products -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Chalo Online Shopping</p>
+    </footer>
+
+</body>
+</html>
+
+<!-- index.html -->
+<header>
+    <div class="logo">
+        <a href="index.html">Chalo Online Shopping</a> <!-- Links back to home page -->
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html" id="home-button">Home</a></li> <!-- Home Button Links to index.html -->
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </nav>
+    <input type="text" id="search-bar" placeholder="Search for products..." onkeyup="searchProducts()">
+</header>
+
+<!-- index.html -->
+<main>
+    <section class="featured-products">
+        <h1>Featured Products</h1>
+        <div class="product-list">
+            <!-- Product 1 -->
+            <div class="product-item">
+                <a href="products/product1.html">
+                    <img src="assets/images/product1.jpg" alt="VR Box">
+                    <h3>VR Box</h3>
+                    <p>$4</p>
+                </a>
+                <button onclick="addToCart(1)">Add to Cart</button>
+            </div>
+            <!-- More product items here -->
+        </div>
+    </section>
+</main>

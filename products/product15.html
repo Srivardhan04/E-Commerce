@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooker - Chalo Online Shopping</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-detail {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .product-detail img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-info h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .product-info p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #e60000;
+        }
+
+        .buy-now {
+            display: inline-block;
+            background-color: #ff6600;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .buy-now:hover {
+            background-color: #cc5500;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="product-detail">
+        <img src="../assets/images/product15.jpg" alt="Cooker">
+        <div class="product-info">
+            <h1>Cooker</h1>
+            <p>Prepare meals quickly and easily with this efficient and durable cooker, designed to help you save time in the kitchen.</p>
+            <p class="price">$75</p>
+            <button class="buy-now" id="buy-now">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("buy-now").addEventListener("click", function () {
+        alert("Redirecting to checkout...");
+        window.location.href = "../checkout.html"; // Replace with actual checkout page
+    });
+</script>
+
+</body>
+</html>

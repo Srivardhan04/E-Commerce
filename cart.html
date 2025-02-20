@@ -1,0 +1,84 @@
+<!-- cart.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Chalo Online Shopping</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">Chalo Online Shopping</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Your Cart</h1>
+        <div id="cart-items"></div>
+
+        <div class="cart-total">
+            <h2>Total: <span id="cart-total">0</span></h2>
+            <button onclick="proceedToCheckout()">Proceed to Checkout</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Chalo Online Shopping</p>
+    </footer>
+
+    <script>
+        // Display cart items
+        function displayCart() {
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const cartItemsDiv = document.getElementById("cart-items");
+            const totalDiv = document.getElementById("cart-total");
+            cartItemsDiv.innerHTML = "";
+
+            let total = 0;
+            cart.forEach(product => {
+                const productDiv = document.createElement("div");
+                productDiv.className = "cart-item";
+                productDiv.innerHTML = `
+                    <p>${product.name}</p>
+                    <p>$${product.price}</p>
+                    <button onclick="removeFromCart(${product.id})">Remove</button>
+                `;
+                cartItemsDiv.appendChild(productDiv);
+                total += product.price;
+            });
+
+            totalDiv.innerText = `$${total}`;
+        }
+
+        // Remove item from cart
+        function removeFromCart(productId) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart = cart.filter(product => product.id !== productId);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            displayCart();
+        }
+
+        // Proceed to checkout
+        function proceedToCheckout() {
+            alert("Proceeding to checkout...");
+            // Redirect to checkout page
+            window.location.href = "checkout.html";
+        }
+
+        // Initial display
+        displayCart();
+    </script>
+
+</body>
+</html>
